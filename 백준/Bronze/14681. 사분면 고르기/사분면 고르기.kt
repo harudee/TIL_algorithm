@@ -1,23 +1,13 @@
-import java.util.*
-
-fun main(args: Array<String>) = with(Scanner(System.`in`)){
-    val x = nextInt()
-    val y = nextInt()
+fun main() {
+    val x = readLine()!!.toInt()
+    val y = readLine()!!.toInt()
     
-    if(x>0){
-        if(y>0){
-            println("1")
-        }else {
-            //y<0
-            println("4")
+    println(
+        when {
+            x > 0 && y > 0 -> '1'
+            x > 0 && y < 0 -> '4'
+            x < 0 && y > 0 -> '2'
+            else -> '3'
         }
-    } else{
-        //x<0
-        if(y>0){
-            println("2")
-        } else{
-            //y<0
-            println("3")
-        }
-    }
+    ) 
 }
