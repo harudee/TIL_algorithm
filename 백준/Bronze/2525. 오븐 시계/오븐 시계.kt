@@ -1,9 +1,7 @@
-import java.util.*
-
-fun main(args: Array<String>) = with(Scanner(System.`in`)){
+fun main(){
     
-    val str = nextLine()
-    val time = nextInt()
+    val str = readLine()
+    val time = readLine()!!.toInt()
     
     val arr = str!!.split(" ").map{it.toInt()}
     
